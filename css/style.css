@@ -31,7 +31,7 @@ a {color:#020e65;text-decoration:none}
 .category ul li a:hover{color: red;text-decoration: underline;}
 
 
-#footer {clear:both;height: 40px;line-height: 40px;margin: 0 auto;bottom: 0;width: 100%;text-align: center;color: #a349a4;font-family: Arial;font-size: 13px;letter-spacing: 1px}
+#footer {clear:both;height: 40px;line-height: 40px;margin: 0 auto;bottom: 0;width: 100%;text-align: center;color: #a349a4;font-family: Arial;font-size: 12px;letter-spacing: 1px}
 .copyright{color: #a349a4;text-decoration:none; vertical-align:center}
 .link{color: #a349a4;text-decoration:underline}
 
