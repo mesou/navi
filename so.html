@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="搜索导航" />
+<meta name="description" content="个人定制化导航" />
+<title>搜索导航</title>
+<meta name="theme-color" content="#222">
+<meta http-equiv="Cache-Control" content="no-cache" />
+<link href="./css/style.css?v=0307.1619" rel="stylesheet" type="text/css" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/ico.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/ico.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="images/ico.ico">
+<link rel="mask-icon" href="images/ico.ico?v=5.1.4" color="#222">
+</head>
+
+<body>
+    <!--回到顶端-->
+    <div class="gotop">
+       <a href="javascript:scroll(0,0)" id="top" class="gotop-style gotop-bg"></a>
+    </div>
+    
+    <!--左侧栏-->
+    <div class='card-holder'>
+        <div class='card-wrapper'>
+            <a href='./index.html'>
+              <div class='card bg-main'>
+                <span class='card-content'>首页 | 综合</span>
+              </div>
+            </a>
+        </div>
+
+        <div class='card-wrapper'>
+            <a href='./study.html'>
+              <div class='card bg-study'>
+                <span class='card-content'>学习 | 学术</span>
+              </div>
+            </a>
+        </div>
+
+
+        <div class='card-wrapper'>
+            <a href='./read.html'>
+              <div class='card bg-read'>
+                <span class='card-content'>阅读 | 文库</span>
+              </div>
+            </a>
+        </div>
+
+        <div class='card-wrapper'>
+            <a href='./av.html'>
+              <div class='card bg-av'>
+                <span class='card-content'>影视 | 音乐</span>
+              </div>
+            </a>
+        </div>
+
+        <div class='card-wrapper'>
+            <a href='./it.html'>
+              <div class='card bg-it'>
+                <span class='card-content'>软件 | 编程</span>
+              </div>
+            </a>
+        </div>
+        
+        <div class='card-wrapper'>
+            <a href='./so.html'>
+              <div class='card bg-so'>
+                <span class='card-content'>搜索 | 资源</span>
+              </div>
+            </a>
+        </div>
+
+        <div class='card-wrapper'>
+            <a href='./life.html'>
+              <div class='card bg-life'>
+                <span class='card-content'>生活 | 工具</span>
+              </div>
+            </a>
+        </div> 
+
+    </div>
+    <div style="text-align:center;margin:20px 0 0 0">
+
+
+    <!--标题-->
+	<div class="mesou"><a target="_blank" href="./index.html"><img src="images/mesou.png" alt="mesou"/></a></div>
+       
+	
+	<div class="wrap">
+
+		<!--搜索框-->
+		<div id="container">
+			<form name="link-form" id="link-form" method="get" action="http://www.baidu.com/s" target="_blank">
+				<div class="search-input">
+					<a id="search" class="search">搜索</a>
+					<input type="text" name="wd" value="" id="wd-input" autofocus="autofocus" autocomplete="off" placeholder="百度一下">
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript">
+        
+				var sAddress=document.getElementById("link-form");
+				var sInfor=document.getElementById("wd-input");
+				var mesou=document.getElementById("search");
+				// 默认百度
+				mesou.onclick=function () {sAddress.action ="http://www.baidu.com/s";sInfor.name = 'wd';sAddress.submit();}
+		</script>
+		
+		<!--常用-->
+		<div style="margin-left:auto;margin-right:auto" class="recommend" id="recommend">
+			<ul>
+                <li><img src="images/baidu.png" alt="百度" width="16" height="16"/><a target="_blank" href="http://www.baidu.com/">百度 </a> &#8226; <a target="_blank" href="http://yun.baidu.com/disk/home"> 网 盘</a></li>
+                <li><img src="images/google.ico" alt="谷歌" width="16" height="16"/><a target="_blank" href="http://www.google.com/">谷歌</a></li>
+                <li><img src="images/360.ico" alt="360" width="16" height="16"/><a target="_blank" href="https://www.so.com/">360搜索</a></li>
+                <li><img src="images/bing.ico" alt="必应" width="16" height="16"/><a target="_blank" href="https://cn.bing.com/">必应</a></li>
+				<li><img src="images/sougou.ico" alt="搜狗" width="16" height="16"/><a target="_blank" href="https://www.sogou.com/">搜狗</a></li>
+				<li><img src="images/chongbuluo.ico" alt="chongbuluo" width="16" height="16"/><a target="_blank" href="http://search.chongbuluo.com/">快搜</a></li>
+                <li><img src="images/591mov.ico" alt="591mov" width="16" height="16"/><a target="_blank" href="https://591mov.com/zh-hans/">591MOV</a></li>
+			</ul>
+		</div>
+        
+        <div class="line"></div>
+
+        
+        <div class="category"><h3>搜索</h3>					
+            <ul>
+                <li><a target="_blank" href="http://www.baidu.com">百度</a></li>
+                <li><a target="_blank" href="https://www.google.com.hk">Google</a></li>
+                <li><a target="_blank" href="http://search.chongbuluo.com/">快搜</a></li>
+                <li><a target="_blank" href="https://www.so.com/">360搜索</a></li>
+                <li><a target="_blank" href="https://www.sogou.com/">搜狗</a></li>
+                <li><a target="_blank" href="http://weixin.sogou.com/">微信搜索</a></li>
+                <li><a target="_blank" href="https://www.yahoo.com/">雅虎搜索</a></li>
+                <li><a target="_blank" href="http://www.wolframalpha.com/m">WolframAlpha</a></li>
+                <li><a target="_blank" href="https://www.bing.com">必应</a></li>
+                <li><a target="_blank" href="https://duckduckgo.com/">DuckDuckGo</a></li>
+            </ul>
+        </div>	
+
+        
+
+        <div class="category"><h3>网盘</h3>
+            <ul>
+                <li> <a target="_blank" href="https://pan.baidu.com/" > 百度网盘 </a> </li> 
+                <li> <a target="_blank" href="http://115.com/" > 115网盘 </a> </li> 
+                <li> <a target="_blank" href="https://www.weiyun.com/" > 微云 </a> </li> 
+                <li> <a target="_blank" href="https://www.lanzou.com/" > 蓝奏云 </a> </li> 
+                <li> <a target="_blank" href="http://pan.stnts.com" > 盛天云盘 </a> </li> 
+            </ul>
+        </div>
+
+
+ 
+        
+        <div class="category"><h3>网盘搜索</h3>
+            <ul>
+                <li><a target="_blank" target="_blank" href="https://www.panc.cc/">胖次</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.oubear.com">Oubear</a></li>
+                <li><a target="_blank" target="_blank" href="http://wangpan007.com/">网盘007</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.quzhuanpan.com/">去转盘网</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.wodepan.com/">我的盘</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.bdsola.com/">Bdsola</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.tuoniao.me/">鸵鸟搜索</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.sobaidupan.com/">搜白度盘</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.tebaidu.com/">特百度</a></li>
+                <li><a target="_blank" target="_blank" href="http://wangpan.renrensousuo.com/">众人搜索</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.xilinjie.com/">西林街搜索</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.bdysou.com">BDY搜</a></li>
+                <li><a target="_blank" target="_blank" href="https://www.xiaoso.net/">小不点</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.56wangpan.com/">56网盘搜索</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.pan115.com/">网盘115</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.wwaaffxx.com/">我爱分享</a></li>
+            </ul>
+        </div>
+        
+        <div class="category"><h3>磁力搜索</h3>
+            <ul>
+                <li><a target="_blank" target="_blank" href="http://www.btkuaisou.org/">BT快搜</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.btyunsou.net/">BT云搜</a></li>
+                <li><a target="_blank" target="_blank" href="http://a8bt.com/">A8BT</a></li>
+                <li><a target="_blank" target="_blank" href="http://kikibt.net/">KiKiBT</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.1024bt.org/">1024BT</a></li>
+                <li><a target="_blank" target="_blank" href="https://torrentz2.eu/">Torrentz2</a></li>
+            </ul>
+        </div>        
+    
+        <div class="category"><h3>影视搜索</h3>
+            <ul>
+                <li><a target="_blank" target="_blank" href="https://591mov.com/zh-hans/">591MOV</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.cilimao.me/">磁力猫</a></li>
+                <li><a target="_blank" target="_blank" href="https://www.cupfox.com/">茶杯狐</a></li>
+                <li><a target="_blank" target="_blank" href="https://www.chapianyuan.com/">查片源</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.ziyuanmao.com/">资源猫</a></li>
+                <li><a target="_blank" target="_blank" href="http://ws.cqtui.com/meiju/search?">美剧侦探</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.slimego.cn/">史莱姆搜索</a></li>
+                <li><a target="_blank" target="_blank" href="http://www.acgsou.com/">ACG 搜索</a></li>
+            </ul>
+        </div>  
+        <div class="category"><h3>其他导航</h3>
+            <ul>				
+                <li><a target="_blank" href="http://ilxdh.com/">龙轩导航</a></li>					
+                <li><A target="_blank" HREF="http://www.quqiaoqiao.com/">去瞧瞧</A></li>
+                <li><A target="_blank" HREF="http://www.itianxia.cn/#">老司机</A></li>
+                <li><A target="_blank" HREF="http://neihan999.com/">内涵导航</A></li>
+                <li><A target="_blank" HREF="http://www.smallbear.me/">小熊时光机</A></li>
+                <li><A target="_blank" HREF="http://mdwhat.com/home/index/1/common">魔导网</A></li>
+                <li><A target="_blank" HREF="http://www.kkiikk.com/">逗留网</A></li>
+                <li><A target="_blank" HREF="http://www.douban2345.cn/">豆瓣2345导航</A></li>
+                <li><A target="_blank" HREF="http://www.kguowai.com/">看国外</A></li>
+                <li><A target="_blank" HREF="http://www.xiaolvji.com/">效率集</A></li>
+                <li><a target="_blank" HREF="http://hao.uisdc.com/">SDC设计师</a></li>
+                <li><a target="_blank" HREF="https://www.seeseed.com/">Seeseed</a></li>
+                <li><a target="_blank" href="http://tool.cc/" > Tool.cc </a> </li> 
+            </ul>
+        </div>    
+        
+        <div class="line"></div>
+	</div>
+      
+</div> 
+		
+<!--底部版权信息-->
+<footer id="footer" class="footer">
+<div>
+    <span class="copyright">&copy; 2017-2018</span>
+    <img src="images/person.png" alt="feedback" width="14" height="14"/>
+    <a class="link" target="_blank" href="https://mesou.github.io/"> Francis Kwei</a>
+    <img src="images/feedback.png" alt="feedback" width="14" height="14"/>
+    <a class="link" target="_blank" href="https://mesou.github.io/navifeedback/index.html">意见反馈</a></li>
+</div>
+</footer>
+
+
+</body>
+</html>

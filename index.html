@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="网址导航" />
+<meta name="description" content="个人定制化导航" />
+<title>MeSou导航</title>
+<meta name="theme-color" content="#222">
+<meta http-equiv="Cache-Control" content="no-cache" />
+<link href="./css/style.css?v=0307.1619" rel="stylesheet" type="text/css" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/ico.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/ico.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="images/ico.ico">
+<link rel="mask-icon" href="images/ico.ico?v=5.1.4" color="#222">
+</head>
+
+<body>
+
+    <!--左侧栏-->
+    <div class='card-holder'>
+        <div class='card-wrapper'>
+            <a href='./index.html'>
+              <div class='card bg-main'>
+                <span class='card-content'>首页 | 综合</span>
+              </div>
+            </a>
+        </div>
+
+        <div class='card-wrapper'>
+            <a href='./study.html'>
+              <div class='card bg-study'>
+                <span class='card-content'>学习 | 学术</span>
+              </div>
+            </a>
+        </div>
+
+
+        <div class='card-wrapper'>
+            <a href='./read.html'>
+              <div class='card bg-read'>
+                <span class='card-content'>阅读 | 文库</span>
+              </div>
+            </a>
+        </div>
+
+        <div class='card-wrapper'>
+            <a href='./av.html'>
+              <div class='card bg-av'>
+                <span class='card-content'>影视 | 音乐</span>
+              </div>
+            </a>
+        </div>
+
+        <div class='card-wrapper'>
+            <a href='./it.html'>
+              <div class='card bg-it'>
+                <span class='card-content'>软件 | 编程</span>
+              </div>
+            </a>
+        </div>
+        
+        <div class='card-wrapper'>
+            <a href='./so.html'>
+              <div class='card bg-so'>
+                <span class='card-content'>搜索 | 资源</span>
+              </div>
+            </a>
+        </div>
+
+        <div class='card-wrapper'>
+            <a href='./life.html'>
+              <div class='card bg-life'>
+                <span class='card-content'>生活 | 工具</span>
+              </div>
+            </a>
+        </div> 
+
+    </div>
+    <div style="text-align:center;margin:20px 0 0 0">
+
+  
+        
+
+    <!--标题-->
+	<div class="mesou"><a target="_blank" href="./index.html"><img src="images/mesou.png" alt="mesou"/></a></div>
+       
+	
+	<div class="wrap">
+
+		<!--搜索框-->
+		<div id="container">
+			<form name="link-form" id="link-form" method="get" action="http://www.baidu.com/s" target="_blank">
+				<div class="search-input">
+					<a id="search" class="search">百度</a>
+					<input type="text" name="wd" value="" id="wd-input" autofocus="autofocus" autocomplete="off" placeholder="百度一下">
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript">
+				var sAddress=document.getElementById("link-form");
+				var sInfor=document.getElementById("wd-input");
+				var mesou=document.getElementById("search");
+				// 默认百度
+				mesou.onclick=function () {sAddress.action ="http://www.baidu.com/s";sInfor.name = 'wd';sAddress.submit();}
+		</script>
+		
+		<!--常用-->
+		<div class="recommend" id="recommend">
+			<ul>
+                <li><img src="images/baidu.png" alt="百度" width="16" height="16"/><a target="_blank" href="https://www.baidu.com/">百度</a>&#8226;<a target="_blank" href="http://yun.baidu.com/disk/home">网盘</a>&#8226;<a target="_blank" href="http://xueshu.baidu.com/">学术 </a></li>
+                <li><img src="images/google.ico" alt="谷歌" width="16" height="16"/><a target="_blank" href="http://www.google.com/">谷歌(需翻墙)</a></li>
+				<li><img src="images/sina.png" alt="新浪微博" width="16" height="16"/><a target="_blank" href="http://www.sina.com.cn/">新 浪 </a> &#8226; <a target="_blank" href="http://weibo.com/"> 微 博</a></li>
+                 <li><img src="images/douban.png" alt="豆瓣" width="16" height="16"/><a target="_blank" href="https://www.douban.com/">豆 瓣</a> &#8226; <a target="_blank" href="https://douban.fm/">FM</a></li>
+				<li><img src="images/netease.png" alt="网易" width="16" height="16"/><a target="_blank" href="http://study.163.com/">云课堂</a> &#8226; <a target="_blank" title="163邮箱" href="http://mail.163.com/">邮箱</a></li>
+				<li><img src="images/chongbuluo.ico" alt="快搜" width="16" height="16"/><a target="_blank" href="http://search.chongbuluo.com/">快 搜</a> &#8226; <a target="_blank" href="http://www.giffox.com/">老司机</a></li>
+               <li><img src="images/feng.ico" alt="疯狂" width="16" height="16"/><a target="_blank" title="影视搜索" href="http://ifkdy.com/">疯狂电影搜索</a></li>
+				<li><img src="images/zhihu.png" alt="知乎" width="16" height="16"/><a target="_blank" href="http://www.zhihu.com/">知 乎</a> &#8226; <a target="_blank" href="https://www.zhihu.com/explore">发 现</a></li>
+				<li><img src="images/bilibili.ico" alt="哔哩哔哩" width="16" height="16"/><a target="_blank" href="http://www.bilibili.com/">哔哩哔哩</a></li>
+				
+                <li><img src="images/github.png" alt="github" width="16" height="16"/><a target="_blank" href="https://github.com/">GitHub</a></li>
+				
+                <li><img src="images/wos.ico" alt="SCI" width="16" height="16"/><a target="_blank" href="http://www.webofknowledge.com/">科学索引(SCI)</a></li>
+                <li><img src="images/ei_x.png" alt="EI" width="16" height="16"/><a target="_blank" href="http://www.engineeringvillage.com/">工程索引(EI)</a></li>
+                <li><img src="images/cnki.png" alt="知网" width="16" height="16"/><a target="_blank" href="http://www.cnki.net/">中国知网</a></li>
+                <li><img src="images/smallpdf.png" alt="smallpdf" width="16" height="16"/><a target="_blank" href="https://smallpdf.com/">SmallPDF</a></li>
+				<li><img src="images/uzer.ico" alt="uzer" width="16" height="16"/><a target="_blank" href="https://uzer.me/">在线云应用uzer</a></li>             
+                <li><img src="images/alibabatif.ico" alt="矢量图" width="16" height="16"/><a target="_blank" href="http://www.iconfont.cn/">阿里巴巴矢量图</a></li> <li><img src="images/12306.ico" alt="12306" width="16" height="16"/><a target="_blank" href="http://www.12306.cn">12306</a></li>      
+                <li><img src="images/wechat.ico" alt="微信公众平台" width="16" height="16"/><a target="_blank" href="https://mp.weixin.qq.com/">微信公众平台</a></li>                
+			</ul>
+		</div>
+        
+
+	</div>   
+</div> 
+
+<!--底部版权信息-->
+<footer id="footer" class="footer">
+<div>
+    <span class="copyright">&copy; 2017-2018</span>
+    <img src="images/person.png" alt="feedback" width="14" height="14"/>
+    <a class="link" target="_blank" href="https://mesou.github.io/"> Francis Kwei</a>
+    <img src="images/feedback.png" alt="feedback" width="14" height="14"/>
+    <a class="link" target="_blank" href="https://mesou.github.io/navifeedback/index.html">意见反馈</a></li>
+</div>
+</footer>
+
+
+</body>
+</html>
