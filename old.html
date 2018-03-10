@@ -1,0 +1,535 @@
+<!DOCTYPE HTML>
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="网址导航" />
+<meta name="description" content="个人定制化导航" />
+<title>MeSou导航</title>
+<meta name="theme-color" content="#222">
+<meta http-equiv="Cache-Control" content="no-cache" />
+<link href="./css/old.css?v=18.3.4.0" rel="stylesheet" type="text/css" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/ico.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/ico.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="images/ico.ico">
+<link rel="mask-icon" href="images/ico.ico?v=5.1.4" color="#222">
+
+
+
+<script>
+//点击展开关闭效果
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){  
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;  
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;  
+var openTip = oOpenTip || "";  
+var shutTip = oShutTip || "";  
+if(targetObj.style.display!="none"){  
+   if(shutAble) return;  
+   targetObj.style.display="none";  
+   if(openTip  &&  shutTip){  
+    sourceObj.innerHTML = shutTip;   
+   }  
+} else {  
+   targetObj.style.display="block";  
+   if(openTip  &&  shutTip){  
+    sourceObj.innerHTML = openTip;   
+   }}}
+</script>
+
+</head>
+
+
+
+<body>
+
+
+    <!--标题-->
+	<div class="mesou"><a target="_blank" href="./index.html"><img src="images/mesou.png" alt="mesou"/></a><br/> <a style="font-size:20px" href="./index.html">体验新版</a></div>
+	
+	<section class="wrap">
+
+		<!--搜索框-->
+		<div id="container">
+			<form name="link-form" id="link-form" method="get" action="http://www.baidu.com/s" target="_blank">
+				<div class="search-input">
+					<a id="search" class="search">百度</a>
+					<input type="text" name="wd" value="" id="wd-input" autofocus="autofocus" autocomplete="off" placeholder="百度一下">
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript">
+				var sAddress=document.getElementById("link-form");
+				var sInfor=document.getElementById("wd-input");
+				var mesou=document.getElementById("search");
+				// 默认百度
+				mesou.onclick=function () {sAddress.action ="http://www.baidu.com/s";sInfor.name = 'wd';sAddress.submit();}
+		</script>
+		
+		<!--常用-->
+		<div class="recommend" id="recommend">
+			<ul>
+                <li><img src="images/baidu.png" alt="百度" width="16" height="16"/><a target="_blank" href="https://www.baidu.com/">百 度 </a> &#8226; <a target="_blank" href="http://yun.baidu.com/disk/home"> 网 盘</a></li>
+				<li><img src="images/sina.png" alt="新浪微博" width="16" height="16"/><a target="_blank" href="http://www.sina.com.cn/">新 浪 </a> &#8226; <a target="_blank" href="http://weibo.com/"> 微 博</a></li>
+                 <li><img src="images/douban.png" alt="豆瓣" width="16" height="16"/><a target="_blank" href="https://www.douban.com/">豆 瓣</a> &#8226; <a target="_blank" href="https://douban.fm/">FM</a></li>
+				<li><img src="images/netease.png" alt="网易" width="16" height="16"/><a target="_blank" href="http://study.163.com/">云课堂</a> &#8226; <a target="_blank" title="163邮箱" href="http://mail.163.com/">邮箱</a></li>
+				<li><img src="images/chongbuluo.ico" alt="快搜" width="16" height="16"/><a target="_blank" href="http://search.chongbuluo.com/">快 搜</a> &#8226; <a target="_blank" href="http://www.giffox.com/">老司机</a></li>
+               <li><img src="images/feng.ico" alt="疯狂" width="16" height="16"/><a target="_blank" title="影视搜索" href="http://ifkdy.com/">疯狂电影搜索</a></li>
+				<li><img src="images/zhihu.png" alt="知乎" width="16" height="16"/><a target="_blank" href="http://www.zhihu.com/">知 乎</a> &#8226; <a target="_blank" href="https://www.zhihu.com/explore">发 现</a></li>
+				<li><img src="images/bilibili.ico" alt="哔哩哔哩" width="16" height="16"/><a target="_blank" href="http://www.bilibili.com/">哔哩哔哩</a></li>
+				<li><img src="images/wechat.ico" alt="微信公众平台" width="16" height="16"/><a target="_blank" href="https://mp.weixin.qq.com/">微信公众平台</a></li>
+                <li><img src="images/github.png" alt="github" width="16" height="16"/><a target="_blank" href="https://github.com/">GitHub</a></li>
+				<li><img src="images/12306.ico" alt="12306" width="16" height="16"/><a target="_blank" href="http://www.12306.cn">12306</a></li>
+                <li><b><a style="cursor: pointer" onclick="openShutManager(this,'box',false,'收起<<<','更多>>>')">更多>>></a></b></li> 
+			</ul>
+		</div>
+
+		<!--点击更多-->
+		<div id="box" style="display:none">
+		
+			<div id="box01" class="title"><h2>探索·发现</h2><div class="line"></div><!--"分割线"-->
+				<div class="category"><h1>搜索引擎</h1>					<ul>
+					<li><a target="_blank" title="全球最大的中文搜索引擎" href="http://www.baidu.com">百度</a></li>
+					<li><a target="_blank" title="全球最大的搜索引擎" href="https://www.google.com.hk">Google</a></li>
+					<li><a target="_blank" title="搜索快人一步" href="http://search.chongbuluo.com/">快搜</a></li>
+					<li><a target="_blank" title="Computational Knowledge Engine" href="http://www.wolframalpha.com/m">WolframAlpha</a></li>
+					<li><a target="_blank" title="全球搜索,有问必应 (Bing)" href="https://www.bing.com">必应</a></li>
+					<li><a target="_blank" title="安全、简洁、快速、不追踪不纪录隐私信息" href="https://duckduckgo.com/">DuckDuckGo</a></li>
+					</ul>
+				</div>			
+			
+				<div class="category"><h1>阅读分享</h1>
+					<ul>
+					<li><a target="_blank" title="豆瓣分享" href="https://www.douban.com/">豆瓣</a></li>
+					<li><a target="_blank" title="阅读，随心随意" href="https://www.yilan.io/home/">一览</a></li>
+					<li><a target="_blank" title="阅读，随心随意" href="http://www.jianshu.com/">简书</a></li>
+					<li><a target="_blank" title="让一部分人先看到未来" href="http://36kr.com/">36氪</a></li>
+					<li><a target="_blank" title="与世界分享你的知识、经验和见解" href="https://www.zhihu.com/">知乎</a></li>
+					<li><a target="_blank" title="A place to share knowledge and better understand the world" href="https://www.quora.com/">Quora</a></li>
+					</ul>
+				</div>
+					
+				<div class="category"><h1>买买买买</h1>
+					<ul>
+						<li><a target="_blank" title="正品低价、品质保障、配送及时、轻松购物！" href="https://www.jd.com/">京东商城</a></li>
+						<li><a target="_blank" title="网上购物商城：要网购, 就来Z.cn!" href="https://www.amazon.cn/">亚马逊</a></li>
+						<li><a target="_blank" title="淘！我喜欢" href="https://www.taobao.com/">淘宝网</a></li>
+						<li><a target="_blank" title="上天猫，就够了" href="https://www.tmall.com/">天猫</a></li>
+						<li><a target="_blank" title="网上购物中心：图书、母婴、美妆、家居、数码、家电、服装、鞋包等，正品低价，货到付款" href="http://www.dangdang.com/">当当网</a></li>
+					</ul>
+				</div>
+				
+				<div class="category"><h1>优质导航</h1>
+					<ul>				
+						<li><a target="_blank" title="发现你最爱的网站" href="http://gate.guokr.com/">果壳任意门</a></li>
+						<li><a target="_blank" title="提供谷歌镜像网页" href="http://gufenso.coderschool.cn/">谷粉搜导航</a></li>
+						<li><a target="_blank" title="点击跳转页面..." href="http://ilxdh.com/">龙轩导航</a></li>					
+						<li><A target="_blank" title="点击跳转页面..." HREF="http://www.quqiaoqiao.com/">去瞧瞧</A></li>
+						<li><A target="_blank" title="点击跳转页面..." HREF="http://www.itianxia.cn/#">老司机</A></li>
+						<li><A target="_blank" title="点击跳转页面..." HREF="http://neihan999.com/">内涵导航</A></li>
+						<li><A target="_blank" title="点击跳转页面..." HREF="http://www.smallbear.me/">小熊时光机</A></li>
+						<li><A target="_blank" title="点击跳转页面..." HREF="http://mdwhat.com/home/index/1/common">魔导网</A></li>
+						<li><A target="_blank" title="点击跳转页面..." HREF="http://www.kkiikk.com/">逗留网</A></li>
+						<li><A target="_blank" title="点击跳转页面..." HREF="http://www.douban2345.cn/">豆瓣2345导航</A></li>
+						<li><A target="_blank" title="国外网站导航" HREF="http://www.kguowai.com/">看国外</A></li>
+						<li><A target="_blank" title="最好用的自定义导航" HREF="http://www.xiaolvji.com/">效率集</A></li>
+						<li><a target="_blank" title="设计" HREF="http://hao.uisdc.com/">SDC设计师</a></li>
+						<li><a target="_blank" title="设计" HREF="https://www.seeseed.com/">Seeseed</a></li>
+					</ul>
+				</div>
+
+			</div>
+		
+			<div id="box02" class="title"><h2>学术·科研<font color="#FF0000" size="1"face="Arial"><a target="_blank" title="Noteexpress出品" href="http://abc.inoteexpress.com/"> &nbsp; &nbsp; &nbsp; &nbsp; 微志导航</a></font></h2><div class="line"></div><!--"分割线"-->
+				
+				<div class="category"><h1>中文检索</h1>
+					<ul>
+						<li><a target="_blank" title="中国知网知识发现网络平台" href="http://www.cnki.net/">中国知网</a></li>
+						<li><a target="_blank" title="万方数据知识服务平台" href="http://www.wanfangdata.com.cn/">万方数据</a></li>
+						<li><a target="_blank" title="仓储式在线作品出版平台" href="http://www.cqvip.com/">维普</a></li>
+						<li><a target="_blank" title="让巨人的肩膀成为知识价值再生的基石" href="http://www.chaoxing.com/">超星发现</a></li>
+						<li><a target="_blank" title="读秀学术搜索是目前全国最完整的文献搜索及获取服务平台" href="http://www.duxiu.com/">读秀</a></li>
+						<li><a target="_blank" title="CNKI学术搜索" href="http://scholar.cnki.net/">CNKI学术</a></li>
+					</ul>
+				</div>
+				
+				<div class="category"><h1>英文检索</h1>
+					<ul>
+						<li><a target="_blank" title="欢迎使用 Web of Science!" href="http://apps.webofknowledge.com/">WebofScience</a></li>
+						<li><a target="_blank" title="Engineering Village offers access to 12 engineering literature and patent databases providing coverage from a wide range of trusted engineering sources." href="http://www.engineeringvillage.com/">EI</a></li>
+						<li><a target="_blank" title="Providing researchers with access to millions of scientific documents from journals, books, series, protocols and reference works." href="https://link.springer.com/">springer</a></li>
+						<li><a target="_blank" title="removing barriers in the way of science" href="http://sci-hub.cc">SciHub</a></li>
+						<li><a target="_blank" title="e-Print archive" href="https://arxiv.org/">arXiv</a></li>
+						<li><a target="_blank" title="the preprint server for biology, operated by Cold Spring Harbor Laboratory, a research and educational institution" href="http://biorxiv.org/">bioRxiv</a></li>
+						<li><a target="_blank" title="Type or paste a DOI name into the text box. Click Go. Your browser will take you to a Web page (URL) associated with that DOI name." href="http://dx.doi.org/">英文DOI</a></li>
+					</ul>
+				</div>
+					
+				<div class="category"><h1>搜索引擎</h1>
+					<ul>
+						<li><a target="_blank" title="保持学习的态度" href="http://xueshu.baidu.com/">百度学术</a></li>
+						<li><a target="_blank" title="站在巨人的肩膀上" href="https://scholar.google.com.hk/">谷歌学术</a></li>
+						
+						<li><a target="_blank" title="学无止境,术有乾坤" href="https://www.bing.com/academic/">必应学术</a></li>
+						<li><a target="_blank" title="Research more, search less" href="http://academic.research.microsoft.com/">微软学术</a></li>
+						<li><a target="_blank" title="搜狗搜索上线全新英文搜索频道，引入微软必应的搜索技术，为用户提供权威、全面、精准的英文搜索体验" href="http://scholar.sogou.com/">搜狗学术</a></li>
+					</ul>
+				</div>
+
+				<div class="category"><h1>专利检索</h1>
+					<ul>
+						<li><a target="_blank" title="在线看专利全文" href="http://www.innojoy.com/search/home.html">INNOJOY</a></li>
+						<li><a target="_blank" title="中国专利公布" href="http://epub.sipo.gov.cn/">中国专利</a></li>
+						<li><a target="_blank" title="美国国家专利局" href="https://www.uspto.gov/">美国专利</a></li>
+						<li><a target="_blank" title="专利搜索,最专业的中文专利搜索引擎" href="http://www.soopat.com/">SooPat</a></li>
+						<li><a target="_blank" title="根据公布号下载中国、美国和欧洲专利" href="http://www.drugfuture.com/uspat/us_patent.asp">专利下载</a></li>
+					</ul>
+				</div>
+				
+				<div class="category"><h1>各国标准</h1>
+					<ul>
+						<li><a target="_blank" title="国家标准委发布——权威 及时 便捷 免费" href="http://www.gb688.cn/bzgk/gb/index">国家标准</a></li>
+						<li><a target="_blank" title="Great things happen when the world agrees" href="https://www.iso.org/">国际标准</a></li>
+						<li><a target="_blank" title="美国标准" href="https://www.ansi.org/">美国标准</a></li>
+						<li><a target="_blank" title="欧洲标准" href="https://www.cen.eu/">欧洲标准</a></li>
+						<li><a target="_blank" title="日本标准" href="http://www.jisc.go.jp/">日本标准</a></li>
+					</ul>
+				</div>
+                <div class="category"><h1>学术论坛</h1>
+					<ul>
+                        <li><a target="_blank" href="http://emuch.net/bbs">小木虫</a> &#8226; <a target="_blank" href="http://hao.muchong.com/"> 导 航</a></li>
+                    </ul>
+				</div>
+			</div>	
+			
+			<div id="box03" class="title"><h2>考试·学习</h2><div class="line"></div><!--"分割线"-->
+					
+				<div class="category"><h1>公 开 课</h1>
+					<ul>
+						<li><a target="_blank" title="领先的实用技能学习平台" href="http://study.163.com/">网易云课堂</a></li>
+						<li><a target="_blank" title="有你要的好课" href="http://www.wanmen.org">万门大学</a></li>
+						<li><a target="_blank" title="Online Courses From Top Universities. Join for Free" href="https://www.coursera.org/">coursera</a></li>
+						<li><a target="_blank" title="Ideas worth spreading" href="https://www.ted.com/">TED</a></li>
+						<li><a target="_blank" title="“爱课程”网是教育部、财政部“十二五”期间启动实施的“高等学校本科教学质量与教学改革工程”支持建设的高等教育课程资源共享平台。" href="http://www.icourses.cn/">爱课程</a></li>
+						<li><a target="_blank" title="发现全球在线好课" href="http://mooc.guokr.com/">mooc学院</a></li>
+						<li><a target="_blank" title="全民终身学习课程平台" href="http://www.jingpinke.com/">精品课</a></li>
+						<li><a target="_blank" title="专业的在线教育平台" href="https://ke.qq.com/index.html">腾讯课堂</a></li>
+						<li><a target="_blank" title="重拾学习乐趣" href="http://www.howzhi.com/">好知网</a></li>
+						<li><a target="_blank" title="创意设计软件学习平台" href="http://doyoudo.com/">doyoudo</a></li>
+						<li><a target="_blank" title="课程导航" href="http://1nami.com/">学习网站导航</a></li>
+					</ul>
+				</div>
+				
+				<div class="category"><h1>考试报名</h1>
+						<ul>	
+							<li><a target="_blank" title="学信网" href="http://www.chsi.com.cn/">学信网</a></li>
+						</ul>
+				</div>
+				
+			</div>	
+
+			<div id="box04" class="title"><h2>编程·计算机</h2><div class="line"></div><!--"分割线"-->	
+
+				<div class="category"><h1>IT公开课</h1>
+					<ul>
+						<li><a target="_blank" title="程序员的梦工厂" href="http://www.imooc.com/">慕课网</a></li>
+						<li><a target="_blank" title="国内领先的IT技术实训平台" href="https://www.shiyanlou.com/courses/">实验楼</a></li>
+						<li><a target="_blank" title="学习面向未来的计算机科学" href="https://www.jisuanke.com/">计蒜客</a></li>
+						<li><a target="_blank" title="在线学习、高清下载、讲义源码下载及课程试学！" href="http://www.ycku.com/course/">瓢城Web</a></li>						
+					</ul>
+				</div>
+
+				<div class="category"><h1>编程论坛</h1>
+					<ul>
+						<li><a target="_blank" title="GitHub" href="https://github.com/">GitHub</a></li>
+						<li><a target="_blank" title="CSDN" href="http://www.csdn.net/">CSDN</a></li>			
+						<li><a target="_blank" title="编程问题解决社区" href="https://stackoverflow.com/">Stack Overflow</a></li>
+						<li><a target="_blank" title="w3cschool" href="http://w3school.com.cn/">w3cschool</a>&#8226;<a target="_blank" title="w3cschool" href="http://123.w3cschool.cn/webtools">工具</a></li>
+						<li><a target="_blank" title="鱼C论坛" href="http://www.fishc.com/">鱼C论坛</a></li>
+						<li><a target="_blank" title="谷歌开发者" href="https://developers.google.cn/">谷歌开发者</a></li>
+					</ul>
+				</div>		
+					
+				<div class="category"><h1>编程工具</h1>
+					<ul>
+						<li><a target="_blank" title="在线工具" href="http://tool.lu/">在线工具1</a></li>
+						<li><a target="_blank" title="在线工具" href="http://tool.oschina.net/">在线工具2</a></li>
+						<li><a target="_blank" title="开源中国" href="http://tool.oschina.net/">开源中国</a></li>
+					</ul>
+				</div>	
+			
+				<div class="category"><h1>Python</h1>
+					<ul>
+						<li><a target="_blank" title="Python 3.6.2 documentation" href="https://docs.python.org/3/">Python帮助</a></li>
+						<li><a target="_blank" title="python教程" href="https://pythonspot.com">Tutorials</a></li>
+						<li><a target="_blank" title="python各种库" href="https://pypi.python.org/">PYPI</a></li>			
+					</ul>
+				</div>
+					
+				<div class="category"><h1>Python库</h1>
+					<ul>
+							<li><a target="_blank" title="用python做机器学习" href="http://scikit-learn.org/">scikitlearn</a> &#8226; <a target="_blank" href="http://sklearn.apachecn.org/cn/0.19.0/">中文</a></li>
+							<li><a target="_blank" title="用python做数值计算" href="https://docs.scipy.org/doc/numpy/">Numpy</a></li>
+							<li><a target="_blank" title="用python做图片处理" href="https://pillow.readthedocs.io/en/latest/reference/index.html">pillow</a></li>
+							<li><a target="_blank" title="用python做数据分析" href="http://pandas.pydata.org/">Pandas</a></li>
+							<li><a target="_blank" title="用Python做数据分析" href="http://matplotlib.org/">Matplotlib</a></li>
+							<li><a target="_blank" title="用Python做网络爬虫" href="http://cn.python-requests.org/zh_CN/latest/">Requests</a></li>
+							<li><a target="_blank" title="用Python做网络爬虫" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/">BeautifulSoup4</a></li>
+						</ul>
+				</div>
+					
+				<div class="category"><h1>专业导航</h1>
+					<ul>
+						<li><a target="_blank" title="程序员的好帮手" HREF="http://www.helloworld114.com/">HelloWorld114</a></li>	
+						<li><a target="_blank" title="计算机" HREF="http://www.gitnavi.com/">GitNavi</a></li>
+						<li><a target="_blank" title="计算机" href="https://navisec.it/">网络安全</a></li>
+						<li><a target="_blank" title="Linux" HREF="http://linux.ubuntu.org.cn/">Linux网站</a></li>
+					</ul>
+				</div>					
+			
+			</div>
+
+			<div id="box05" class="title"><h2>素材·文库·电子书</h2><div class="line"></div><!--"分割线"-->
+
+				<div class="category"><h1>素材|色彩</h1>
+					<ul>
+					<li><a target="_blank" title="中国传统颜色" href="http://zhongguose.com/">中国传统颜色</a></li>
+					<li><a target="_blank" title="日本传统颜色" href="http://nipponcolors.com/">日本传统颜色</a></li>
+					<li><a target="_blank" title="Adobe color" href="https://color.adobe.com/">Adobe color</a></li>
+					<li><a target="_blank" title="色彩搭配" href="http://www.colorhunt.co/">色彩搭配</a></li>
+					<li><a target="_blank" title="每一个微小的创意，都可以改变世界！" href="http://www.vx.com/">微小网</a></li>
+					<li><a target="_blank" title="点击跳转页面..." HREF="http://www.iconfont.cn/" >阿里巴巴矢量图</a></li>
+					</ul>
+				</div>
+				
+				<div class="category"><h1>文库资料</h1>
+					<ul>	
+						<li><a target="_blank" title="百度文库" href="https://wenku.baidu.com/">百度文库</a></li>
+						<li><a target="_blank" title="豆丁网" href="http://www.docin.com/">豆丁网</a></li>
+						<li><a target="_blank" title="道客巴巴" href="http://www.doc88.com/">道客巴巴</a></li>
+						<li><a target="_blank" title="爱问共享资料" href="http://ishare.iask.sina.com.cn/">爱问共享资料</a></li>
+						<li><a target="_blank" title="360Doc图书馆" href="http://www.360doc.com/">360Doc图书馆</a></li>
+						<li><a target="_blank" title="维基文库" href="https://wikisource.org">维基文库</a></li>
+					</ul>
+				</div>
+				
+				<div class="category"><h1>KINDLE</h1>
+					<ul>
+						<li><a target="_blank" title="Kindle人论坛" href="https://kindleren.com/forum.php">Kindle人论坛</a></li>
+						<li><a target="_blank" title="Kindle伴侣" href="https://kindlefere.com/">Kindle伴侣</a></li>
+						<li><a target="_blank" title="万读论坛" href="http://www.kindle10000.com/forum.php">万读论坛</a></li>
+						<li><a target="_blank" title="Kindle漫画" href="http://vol.moe/">Kindle漫画</a></li>
+						<li><a target="_blank" title="好读" href="http://www.haodoo.net/">好读</a></li>
+					</ul>
+				</div>
+				
+				<div class="category"><h1>书籍搜索</h1>
+					<ul>
+						<li><a target="_blank" title="书多多" href="http://www.shuduoduo.me/">书多多</a></li>
+						<li><a target="_blank" title="鸠摩搜索" href="https://www.jiumodiary.com/">鸠摩搜索</a></li>
+						<li><a target="_blank" title="BOOKZZ" href="http://zh.bookzz.org/">BOOKZZ</a></li>
+						<li><a target="_blank" title="搜索全世界最全面的全文图书索引。" href="https://books.google.com.hk/">谷歌图书</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div id="box06" class="title"><h2>视频·音乐<font color="#FF0000" size="1"face="Arial"><a target="_blank" href="http://www.dydh.org/"> &nbsp; &nbsp; &nbsp; &nbsp; 电影导航</a></font></h2><div class="line"></div><!--"分割线"-->		
+					
+				<div class="category"><h1>二次元</h1>
+					<ul>
+						<li><a target="_blank" title="bilibili是国内知名的视频弹幕网站" href="http://www.bilibili.com/">哔哩哔哩</a></li>
+						<li><a target="_blank" title="AcFun是一家弹幕视频网站" href="http://www.acfun.cn/">AcFun</a></li>
+						<li><a target="_blank" title="喵搜" href="https://nyaso.com/">喵搜</a></li>
+						<li><a target="_blank" title="ACG搜" href="http://www.acgsou.com/">ACG搜</a></li>
+						<li><a target="_blank" title="茵蒂克丝" href="http://www.kisssub.org/">茵蒂克丝</a></li>
+						<li><a target="_blank" title="萌番组" href="https://bangumi.moe/">萌番组</a></li>
+						<li><a target="_blank" title="动漫爱好者的交流互动平台" href="http://donghua.dmzj.com/">动漫之家</a></li>
+						<li><a target="_blank" title="鼠绘漫画网" href="http://www.ishuhui.com/">鼠绘漫画网</a></li>
+						<li><a target="_blank" title="诸神字幕组" href="http://www.kamigami.org/">诸神字幕组</a></li>
+						<li><a target="_blank" title="有妖气漫画" href="http://www.u17.com/">有妖气漫画</a></li>
+						<li><a target="_blank" title="二次元画像检索..." HREF="https://ascii2d.net/">二次元画像检索</a></li>
+					</ul>
+				</div>
+					
+				<div class="category"><h1>音乐Music</h1>
+					<ul>
+						<li><a target="_blank" title="5Sing" href="http://5sing.kugou.com/">5Sing</a></li>
+						<li><a target="_blank" title="音悦台" href="http://www.yinyuetai.com/">音悦台</a></li>
+					</ul>
+				</div>
+					
+				<div class="category"><h1>视频下载</h1>
+					<ul>
+						<li><a target="_blank" title="下载B站视频" href="http://www.jijidown.com/">B站视频</a></li>
+						<li><a target="_blank" title="下载微博视频" href="http://www.weibovideo.com/">微博视频</a></li>
+						<li><a target="_blank" title="下载YouTube" href="http://www.clipconverter.cc/">YouTube</a></li>
+					</ul>
+				</div>
+					
+				<div class="category"><h1>VIP视频</h1>
+					<ul>
+						<li><A target="_blank" title="VIP视频在线观看" HREF="http://ifkdy.com/">疯狂电影搜</a></li>
+						<li><a target="_blank" title="支持各大视频网站会员VIP视频在线播放" href="http://goudidiao.com/">够低调解析</a></li>
+						<li><a target="_blank" title="支持各大视频网站会员VIP视频在线播放" href="http://www.52dytt.net/vip.html">全能 VIP</a></li>
+						<li><a target="_blank" title="支持各大视频网站会员VIP视频在线播放" href="http://lykezhan.com/vip/">LY客栈</a></li>
+						<li><a target="_blank" title="支持各大视频网站会员VIP视频在线播放" href="http://yy.zhiliaotang.com/vip/">知了堂</a></li>
+						<li><a target="_blank" title="支持各大视频网站会员VIP视频在线播放" href="http://www.a6a6.org/">爱6网</a></li>
+					</ul>
+				</div>
+					
+				<div class="category"><h1>视频网站</h1>
+					<ul>
+						<li><a target="_blank" title="需要翻墙的哟~" href="https://www.youtube.com">Youtube</a></li>
+						<li><a target="_blank" title="视频网站" href="http://www.youku.com/">优酷</a></li>
+						<li><a target="_blank" title="视频网站" href="http://www.tudou.com/">土豆</a></li>
+						<li><a target="_blank" title="视频网站~" href="http://tv.sohu.com/">搜狐</a></li>
+						<li><a target="_blank" title="视频网站" href="https://v.qq.com/">腾讯</a></li>
+						<li><a target="_blank" title="视频网站" href="http://www.iqiyi.com/">爱奇艺</a></li>
+						<li><a target="_blank" title="视频网站" href="http://www.pptv.com/">PPTV</a></li>
+					</ul>
+				</div>
+					
+			</div>
+					
+			<div id="box07" class="title"><h2>实用·工具</h2><div class="line"></div><!--"分割线"-->			
+					
+				<div class="category"><h1>在线工具</h1>
+					<ul>
+						<li><a target="_blank" title="随时使用各种应用" href="https://uzer.me/">云端超级应用</a></li>
+						<li><a target="_blank" title="ORC识别" href="https://www.onlineocr.net/">OCR识别</a></li>
+						<li><a target="_blank" title="便捷的思维工具" href="http://naotu.baidu.com/">百度脑图</a></li>
+						<li><a target="_blank" title="创意，绝不雷同" href="https://h5.baidu.com/">百度H5</a></li>
+						<li><a target="_blank" title="二维码生成器" href="http://cli.im/">二维码生成器</a></li>						
+						<li><a target="_blank" title="将长网址变短" href="http://dwz.wailian.work/">短网址</a></li>
+					</ul>
+				</div>
+
+				<div class="category"><h1>图片|处理</h1>
+					<ul>
+						<li><a target="_blank" title="表情包" href="http://www.ubiaoqing.com/">U表情包</a></li>
+						<li><a target="_blank" title="GIF" href="http://www.soogif.com/compress">SOOGIF</a></li>
+						<li><a target="_blank" title="PIGGIF" href="http://www.piggif.com/tools/compress">PIGGIF</a></li>
+						<li><a target="_blank" title="PS" href="http://www.uupoop.com/">PS在线</a></li>
+						<li><a target="_blank" title="美图秀秀" href="http://xiuxiu.web.meitu.com/main.html">美图秀秀</a></li>
+					</ul>
+				</div>
+					
+				<div class="category"><h1>文件|格式</h1>
+					<ul>			
+						<li><a target="_blank" title="TXTTool" href="http://www.txttool.com/">TXTTool</a></li>	
+						<li><a target="_blank" title="文档对比" href="http://prettydiff.com/">文档对比</a></li>			
+						<li><a target="_blank" title="电子书转换" href="https://cn.epubee.com/">电子书转换</a></li>
+						<li><a target="_blank" title="文件转换" href="http://www.zamzar.com/">文件转换</a></li>
+						<li><a target="_blank" title="Smallpdf" href="https://smallpdf.com/">Smallpdf</a></li>
+						<li><a target="_blank" title="文件转换器" href="http://cn.office-converter.com/">文件转换器</a></li>
+					</ul>
+				</div>
+
+				<div class="category"><h1>邮  箱</h1>
+					<ul>					
+						<li><a target="_blank" title="QQ邮箱" href="https://mail.qq.com/">QQ邮箱</a></li>
+						<li><a target="_blank" title="新浪邮箱" href="http://mail.sina.com.cn/">新浪邮箱</a></li>
+						<li><a target="_blank" title="Hotmail" href="https://login.live.com/">Hotmail</a></li>
+						<li><a target="_blank" title="Gmail" href="https://mail.google.com">Gmail</a></li>
+					</ul>
+				</div>
+				<div class="category"><h1>翻译|词典</h1>
+					<ul>						
+					<li><a target="_blank" title="百度翻译" href="http://fanyi.baidu.com/">百度翻译</a></li>
+					<li><a target="_blank" title="谷歌翻译" href="https://translate.google.cn/">谷歌翻译</a></li>
+					<li><a target="_blank" title="维基词典" href="https://www.wiktionary.org/">维基词典</a></li>
+					<li><a target="_blank" title="百度词典" href="http://dict.baidu.com/">百度词典</a></li>
+					</ul>
+				</div>	
+				<div class="category"><h1>科学上网</h1>
+					<ul>
+						<li><a target="_blank" title="翻墙工具大全" href="https://github.com/bannedbook/fanqiang/wiki">科学工具</a></li>
+						<li><a target="_blank" title="老D博客" href="https://laod.cn/hosts/2017-google-hosts.html">Hosts</a></li>
+						
+					</ul>
+				</div>
+					
+			</div>
+
+			<div id="box08" class="title"><h2>软件·下载<font color="#FF0000" size="1"face="Arial"><a target="_blank" title="开源镜像合集" href="https://github.com/mesou/navi/blob/master/mirrors.md"> &nbsp; &nbsp; &nbsp; &nbsp; 开源镜像</a></font></h2><div class="line"></div><!--"分割线"-->		
+				<div class="category"><h1>必备软件</h1>
+					<ul>
+						<li><a target="_blank" title="腾讯QQ" href="http://im.qq.com/">腾讯QQ</a></li>
+						<li><a target="_blank" title="微信" href="https://weixin.qq.com/">微信</a></li>
+						<li><a target="_blank" title="QQ拼音" href="http://qq.pinyin.cn/">QQ拼音</a></li>
+						<li><a target="_blank" title="解压7-Zip" href="http://www.7-zip.org/">解压7-Zip</a></li>
+						<li><a target="_blank" title="PotPlayer" href="http://potplayer.daum.net/">PotPlayer</a></li>
+						<li><a target="_blank" title="NotePad++" href="https://notepad-plus-plus.org/">NotePad++</a></li>
+						<li><a target="_blank" title="百度网盘" href="http://pan.baidu.com/download">百度网盘</a></li>
+						<li><a target="_blank" title="极速PDF阅读器" href="http://www.jisupdf.com/">极速PDF</a></li>
+						<li><a target="_blank" title="CAJ阅读器" href="http://cajviewer.cnki.net/">CAJ阅读器</a></li>
+						<li><a target="_blank" title="网易云音乐" href="https://music.163.com/#/download">网易云音乐</a></li>
+						<li><a target="_blank" title="有道云笔记" href="http://note.youdao.com/">有道云笔记</a></li>
+						<li><a target="_blank" title="有道词典" href="http://cidian.youdao.com/">有道词典</a></li>
+						<li><a target="_blank" title="世界之窗浏览器" href="http://www.theworld.cn/">世界之窗浏览器</a></li>
+						<li><a target="_blank" title="提供微软各种系统、软件服务器系统等磁力链接" href="http://msdn.itellyou.cn/">MSDN</a></li>
+					</ul>
+				</div>
+
+				<div class="category"><h1>开源软件</h1>
+					<ul>					
+						<li><a target="_blank" title="清华大学开源镜像网站" href="https://mirrors.tuna.tsinghua.edu.cn/">清华开源</a></li>
+						<li><a target="_blank" title="PYTHON官方网站" href="https://www.python.org/">python</a></li>
+						<li><a target="_blank" title="一个包含各种库的开源的Python发行版本" href="https://repo.continuum.io/archive/">Anaconda</a></li>
+						<li><a target="_blank" title="一个包含各种库的开源的Python发行版本" href="https://repo.continuum.io/miniconda/">Miniconda</a></li>
+						<li><a target="_blank" title="QT软件下载" href="https://www.qt.io/download-open-source/">QT免费开源</a></li>
+					</ul>
+				</div>
+
+			</div>	
+			
+			<div id="box09" class="title"><h2>网盘·磁力</h2><div class="line"></div><!--"分割线"-->
+				<div class="category"><h1>网盘搜索</h1>
+					<ul>
+						<li><a target="_blank" title="最好用的" href="https://www.panc.cc/">胖次</a></li>
+						<li><a target="_blank" title="Oubear" href="http://www.oubear.com">Oubear</a></li>
+						<li><a target="_blank" title="网盘007" href="http://wangpan007.com/">网盘007</a></li>
+						<li><a target="_blank" title="去转盘网" href="http://www.quzhuanpan.com/">去转盘网</a></li>
+						<li><a target="_blank" title="我的盘" href="http://www.wodepan.com/">我的盘</a></li>
+						<li><a target="_blank" title="Bdsola" href="http://www.bdsola.com/">Bdsola</a></li>
+						<li><a target="_blank" title="鸵鸟搜索" href="http://www.tuoniao.me/">鸵鸟搜索</a></li>
+						<li><a target="_blank" title="搜白度盘" href="http://www.sobaidupan.com/">搜白度盘</a></li>
+						<li><a target="_blank" title="特百度" href="http://www.tebaidu.com/">特百度</a></li>
+						<li><a target="_blank" title="众人搜索" href="http://wangpan.renrensousuo.com/">众人搜索</a></li>
+						<li><a target="_blank" title="西林街搜索" href="http://www.xilinjie.com/">西林街搜索</a></li>
+						<li><a target="_blank" title="BDY搜" href="http://www.bdysou.com">BDY搜</a></li>
+					</ul>
+				</div>
+				
+				<div class="category"><h1>磁力搜索</h1>
+					<ul>
+						<li><a target="_blank" title="神奇的网站" href="https://591mov.com/zh-hans/">591MOV</a></li>
+						<li><a target="_blank" title="BT快搜" href="http://www.btkuaisou.org/">BT快搜</a></li>
+						<li><a target="_blank" title="BT云搜" href="http://www.btyunsou.net/">BT云搜</a></li>
+						<li><a target="_blank" title="A8BT" href="http://a8bt.com/">A8BT</a></li>
+						<li><a target="_blank" title="KiKiBT" href="http://kikibt.net/">KiKiBT</a></li>
+						<li><a target="_blank" title="1024BT" href="http://www.1024bt.org/">1024BT</a></li>
+						<li><a target="_blank" title="Torrentz2" href="https://torrentz2.eu/">Torrentz2</a></li>
+					</ul>
+				</div>
+
+			</div>
+		
+		</div>
+
+	</section>
+		
+	
+<!--底部版权信息-->
+<footer id="footer" class="footer">
+<div class="copyright"> &copy; <span itemprop="copyrightYear">2017 - 2018</span>
+  <span>Francis Kwei</span>
+</div>
+</footer>
+
+
+</body>
+</html>
