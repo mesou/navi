@@ -43,10 +43,10 @@
 
 		<!--搜索框-->
 		<div id="container">
-			<form name="link-form" id="link-form" method="get" action="http://www.iconfont.cn/search/index?searchType=icon&q=" target="_blank">
+			<form name="link-form" id="link-form" method="get" action="https://s.taobao.com/search?q=" target="_blank">
 				<div class="search-input">
 					<a id="search" class="search">搜索</a>
-					<input type="text" name="wd" value="" id="wd-input" autofocus="autofocus" autocomplete="off" placeholder="图标搜索">
+					<input type="text" name="wd" value="" id="wd-input" autofocus="autofocus" autocomplete="off" placeholder="搜淘宝">
 				</div>
 			</form>
 		</div>
@@ -55,8 +55,8 @@
 				var sAddress=document.getElementById("link-form");
 				var sInfor=document.getElementById("wd-input");
 				var kwei=document.getElementById("search");
-				// 默认阿里巴巴图标
-				kwei.onclick=function () {sAddress.action ="http://www.iconfont.cn/search/index?searchType=icon&q=";sInfor.name = 'q';sAddress.submit();}
+				// 默认淘宝
+				kwei.onclick=function () {sAddress.action ="https://s.taobao.com/search?q=";sInfor.name = 'q';sAddress.submit();}
 		</script>
 		
 		<!--常用-->
@@ -71,6 +71,7 @@
                 <li><img src="images/mail.png" alt="mail" width="16" height="16"/><a target="_blank" href="https://10minutemail.com/">临时邮箱</a></li>  
                 <li><img src="images/douban.png" alt="douban" width="16" height="16"/><a target="_blank" href="https://www.douban.com/" > 豆瓣 </a> </li> 
                 <li><img src="images/sina.png" alt="sina" width="16" height="16"/><a target="_blank" href="https://weibo.com/" > 新浪微博 </a> </li> 
+                <li><img src="images/hao123.ico" alt="hao123" width="16" height="16"/><a target="_blank" href="http://moe.hao123.com/" > 萌主页 </a> </li>
 			</ul>
 		</div>
         
