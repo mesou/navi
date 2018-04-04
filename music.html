@@ -43,7 +43,7 @@
 
 		<!--搜索框-->
 		<div id="container">
-			<form name="link-form" id="link-form" method="get" action="http://ifkdy.com/?q=" target="_blank">
+			<form name="link-form" id="link-form" method="get" action="http://music.baidu.com/search?key=" target="_blank">
 				<div class="search-input">
 					<a id="search" class="search">搜索</a>
 					<input type="text" name="wd" value="" id="wd-input" autofocus="autofocus" autocomplete="off" placeholder="疯狂影视搜索，看场电影放松一下">
@@ -55,8 +55,8 @@
 				var sAddress=document.getElementById("link-form");
 				var sInfor=document.getElementById("wd-input");
 				var kwei=document.getElementById("search");
-				// 默认疯狂影视搜索
-				kwei.onclick=function () {sAddress.action ="http://ifkdy.com/?q=";sInfor.name = 'q';sAddress.submit();}
+				// 百度音乐搜索
+				kwei.onclick=function () {sAddress.action ="http://music.baidu.com/search?key=";sInfor.name = 'key';sAddress.submit();}
 		</script>
 		
 
