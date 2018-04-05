@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>RGB与16进制色互转</title>
+<meta name="keywords" content="RGB转16进制色互转，16进制转rgb">
+<meta name="description" content="RGB转16进制色互转，十六进制转RGB,颜色转换">
+<style type="text/css">
+    body{font:14px/1.4 "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important; color:#333; background:#fff}
+    a , h1 , h2 , p , span {font-family: "LiHei","LiHei Pro Medium","Microsoft YaHei","Microsoft JhengHei","STHeiti",Arial,Helvetica,sans-serif;}
+    a{ text-decoration:none} 
+    h1 {font-weight: bold;font-size: 4em;text-align: center;color:#fa5f5f;	letter-spacing: 0.1em; margin-bottom:0; background:#fff; padding:12px	}
+    h1 span{ display:block;letter-spacing: 0em; font-weight: 100;font-size: 0.5em; color:#666}			
+    .change{ margin: 0 auto 20px; text-align:center ; display:block; background:#f5f7f7; border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5; height:66px;line-height:66px;}
+    .change a{  font-size:16px ; color:#666; display:inline-block; padding:0 20px ; border-right:1px solid #e5e5e5;border-left:1px solid #fff; }			
+    .change a.activate{ background:#fa5f5f; color:#fff;border-right:1px solid #fa9797;border-left:1px solid #f85555; }
+    .change a:hover{ background:#00aef6; color:#fff; text-decoration:none;border-right:1px solid #01a2e5;border-left:1px solid #01a2e5; }
+#rgba-container {margin:0 auto; }
+#rgba-container td{ padding:3px 0;height:30px;text-align:right;}
+#rgba-container input{ height:30px !important; line-height:30px !important; text-indent:8px; font-size:16px; font-weight:bold; color:#007FF4;}
+#rgba-rgba-container{ margin:0 auto;float:left;padding:20px 50px}
+#rgba-preview{ background-color:#fff; width:100%; height:80%; margin:0; font-size:0px; line-height:100px; text-align:center; overflow:hidden;}
+
+
+
+</style>
+</head>
+
+<body>
+    <h1>RGB与16进制互转</h1>
+    <span class="change">
+        <a href="/design/cncolor" class="link">中国传统色彩</a><a href="/design/jpcolor" class="link">日本传统色彩</a><a href="/design/rgbhex" class="link  activate">RGB与16进制互转</a>
+    </span>
+
+    <div id="rgba-container">
+        <table id="rgba-rgba-container" align="center">
+            <tbody>
+                <tr>
+                    <td colspan="2" style="font-weight:bold; font-size:24px;text-align:left;">RGB</td>
+                </tr>
+                <tr>
+                    <td><span style="font-weight:bold; font-size:16px;">R</span> 红色（0~255）：</td>
+                    <td><input style="width:50px" type="text" class="text" value="0"></td>
+                </tr>
+                <tr>
+                    <td><span style="font-weight:bold; font-size:16px;">G</span> 绿色（0~255）：</td>
+                    <td><input style="width:50px" type="text" class="text" value="0"></td>
+                </tr>
+                <tr>
+                    <td><span style="font-weight:bold; font-size:16px;">B</span> 蓝色（0~255）：</td>
+                    <td><input style="width:50px" type="text" class="text" value="0"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="color:green;">注：网页的透明度是0~1<br>下面用于 C#、Android 等程序</td>
+                </tr>
+                <tr>
+                    <td><span style="font-weight:bold; font-size:16px;">A</span> 透明度（0~255，可选）：</td>
+                    <td><input style="width:50px" type="text" class="text" value=""></td>
+                </tr>
+            </tbody>
+        </table>  
+        <table id="rgba-rgba-container" align="center">
+            <tbody>
+                <tr>
+                    <td colspan="2" style="font-weight:bold; font-size:24px;text-align:left;">16x</td>
+                </tr>
+                <tr>
+                    <td>字符（6或8位）：</td>
+                    <td><input style="width:150px" type="text" class="text" value="#000"></td>
+                </tr>
+                <tr>
+                   <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-weight:bold; font-size:24px;text-align:left;">预览</td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2"><div id="rgba-preview"><div id="rgba-preview-box" style="background-color: rgb(28, 8, 7);">color</div></div></td>
+                </tr>
+
+
+            </tbody>
+        </table>        
+    </div>
+
+<script type="text/javascript" src="jq.js"></script>
+
+<script>
+$(function(){
+	if( window.navigator.userAgent.search(/rv\:11\.0/) > -1 ){
+		$(document.body).append($('<style>div[id*=\'buttons-container\']{ margin-top:5px;}</style>'));
+	}
+});
+</script>
+<script>
+var __sid = 10;
+$(function(){
+	var $input = $('#rgba-container input'),
+		$r  = $input.eq(0),
+		$g  = $input.eq(1),
+		$b  = $input.eq(2),
+		$a  = $input.eq(3),
+		$16 = $input.eq(4),
+		$v  = $('#rgba-preview-box'),
+
+		pad = function(char){
+			if( char.length == 1 ){
+				return '0' + char;
+			}
+			return char;
+		};
+
+		$input.on('keyup change', function(){
+			if( this == $16.get(0)){
+				return;
+			}
+			this.value = this.value.replace(/\D/g, '').substr(0, 3);
+			if(this.value.length > 1){
+				this.value = this.value.replace(/^0+/g, '');
+			}
+			if(this.value > 255){
+				this.value = this.value.substr(0, 2);
+			}
+
+			if(this.value !== ''){
+				var arr = [];
+				arr.push( pad(parseInt($r.val(), 10).toString(16) ));
+				arr.push( pad(parseInt($g.val(), 10).toString(16) ));
+				arr.push( pad(parseInt($b.val(), 10).toString(16) ));
+				if($a.val() !== ''){
+					arr.push( pad(parseInt($a.val(), 10).toString(16) ));
+				}
+				$16.val('#' + arr.join('').toUpperCase());
+				$v.css("background-color", $16.val().substr(0, 7));
+				if( $a.val() !== ''){
+					$v.css("opacity", $a.val() * 100/255/100);
+				}
+			}else{
+				$v.css("background-color", "transparent");
+			}
+
+		});
+
+		$16.on('keyup change', function(){
+			if(this.value == '' || this.value.charAt(0) != '#'){
+				this.value = '#' + this.value;
+			}
+			this.value = this.value.replace(/[^0-9a-fA-F#]/g, '').substring(0, 9);
+			var val = this.value.replace(/^#/, ''), len = val.length;
+			if(len == 3){
+				val = val.split('');
+				$r.val(parseInt(val[0], 16));
+				$g.val(parseInt(val[1], 16));
+				$b.val(parseInt(val[2], 16));
+				$a.val('');
+				$v.css("background-color", $16.val().substr(0, 7));
+				if( $a.val() !== ''){
+					$v.css("opacity", $a.val() * 100/255/100);
+				}
+			}else if( len == 6 || len == 8 ){
+				val = val.split('');
+				$r.val(parseInt(val[0], 16) * 16 + parseInt(val[1], 16));
+				$g.val(parseInt(val[2], 16) * 16 + parseInt(val[3], 16));
+				$b.val(parseInt(val[4], 16) * 16 + parseInt(val[5], 16));
+				if( len == 8 ){
+					$a.val(parseInt(val[6], 16) * 16 + parseInt(val[7], 16));
+				}else{
+					$a.val('');
+				}
+				$v.css("background-color", $16.val().substr(0, 7));
+				if( $a.val() !== ''){
+					$v.css("opacity", $a.val() * 100/255/100);
+				}
+			}else{
+				$a.val('');
+				$v.css("background-color", "transparent");
+			}
+		});
+
+});
+</script>
+
+
+</body></html>
