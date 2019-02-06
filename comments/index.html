@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="评论">
+    <meta name="description" content="评论">
+    <title>意见反馈</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/ico.PNG"/>
+    <link rel="icon" href="images/ico.PNG" type="image/x-icon">
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        margin: 0 auto;
+        padding-bottom: 60px;
+        max-width: 720px;
+        color: #6190E8;
+        font-family: "PingFang SC", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+      }
+      .hero {
+        margin: 80px 0;
+        text-align: center;
+      }
+
+      .hero h1 {
+        margin-left: 16px;
+        display: inline-block;
+        font-size: 32px;
+        font-weight: 500;
+        vertical-align: bottom;
+      }
+      @media (max-width: 720px) {
+        .container {
+          width: 90%;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="gitalk.css">
+
+  </head>
+  <body>
+      <div class="container">
+      <div class="hero">
+        <div>
+          <h1>
+            如果您有什么意见或建议，请在下方评论
+          </h1>
+        </div>
+    
+<div id="gitalk-container"></div> 
+<script src="gitalk.min.js"></script>  
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+
+    // gitalk的主要参数
+        clientID: `7b02ef136333f5dba0ff`,
+        clientSecret: `fd6178d0db2714543781d986b9ed9280770d82f7`,
+        repo: `navi-comments`,
+        owner: 'mesou',
+        admin: ['mesou'],
+        id: location.pathname, 
+        distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+</script> 
+
+  </body>
+</html>
