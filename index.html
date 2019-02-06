@@ -14,6 +14,26 @@
 <link rel="icon" type="image/png" sizes="16x16" href="images/ico.PNG">
 <link rel="mask-icon" href="images/ico.PNG?v=2018.0326" color="#222">
 </head>
+<!-- Gitalk 评论 start  -->
+
+<!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+<div id="gitalk-container"></div>     <script type="text/javascript">
+    var gitalk = new Gitalk({
+
+    // gitalk的主要参数
+        clientID: `7b02ef136333f5dba0ff`,
+        clientSecret: `fd6178d0db2714543781d986b9ed9280770d82f7`,
+        repo: `navi`,
+        owner: 'mesou',
+        admin: ['mesou'],
+        id: 'navi.comments', 注意id一定不要重复，这里是举个例子，可以写中文，如果重复了，就会把其他地方的评论显示过来
+
+    });
+    gitalk.render('gitalk-container');
+</script> 
+<!-- Gitalk end -->
 
 <body>
 <div id="navigation">
